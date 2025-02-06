@@ -10,7 +10,7 @@ setup(name='asynccapsolver',
     install_requires=["aiohttp","certifi"],
     author='optinsoft',
     author_email='optinsoft@gmail.com',
-    keywords=['anti-captcha','async'],
+    keywords=['capsolver','async'],
     url='https://github.com/optinsoft/asynccapsolver',
     packages=['asynccapsolver']
 )

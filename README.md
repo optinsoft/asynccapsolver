@@ -9,12 +9,12 @@ pip install git+https://github.com/optinsoft/asynccapsolver.git
 ## Usage
 
 ```python
-from asyncanticaptcha import AsyncAntiCaptcha
+from asynccapsolver import AsyncCapSolver
 import asyncio
 
 async def test(apiKey: str):
-    anticaptcha = AsyncAntiCaptcha(apiKey)
-    print("getBalance\n", await anticaptcha.getBalance())    
+    capsolver = AsyncCapSolver(apiKey)
+    print("getBalance\n", await capsolver.getBalance())    
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()

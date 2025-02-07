@@ -29,7 +29,7 @@ async def testImageToTextTask(capsolver: AsyncCapSolver):
         solution = await capsolver.waitForTask(task_id, log_processing=True)
     return solution["text"]
 
-async def testAsyncCapSolver(apiKey: str):
+async def testAsyncCapSolver(apiKey: str, apiUrl: str = 'https://api.capsolver.com/'):
     logger = logging.Logger('testcapsolver')
 
     logger.setLevel(logging.DEBUG)
@@ -42,7 +42,7 @@ async def testAsyncCapSolver(apiKey: str):
     fileHandler.setFormatter(logFormatter)
     logger.addHandler(fileHandler)
 
-    capsolver = AsyncCapSolver(apiKey, logger=logger)
+    capsolver = AsyncCapSolver(apiKey, api_url=apiUrl, logger=logger)
 
     print('--- asynccapsolver test ---')
 
